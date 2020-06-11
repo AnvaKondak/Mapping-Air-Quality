@@ -22,10 +22,6 @@ app.get('/api', (request, response) => {
 });
 
 app.post('/api', (request, response) => {
-  /*2 arguments- request var holds all data contained within that request.
-  all data being sent, any data about that client.
-  response is variable with any info i need to send back to client.
-  */
   console.log('i got a request');
   const data = request.body;
   const timestamp = Date.now();
