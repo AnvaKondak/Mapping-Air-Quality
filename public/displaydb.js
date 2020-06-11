@@ -2,7 +2,6 @@
 const mymap = L.map('issmap').setView([0,0], 1);
 //var: lat, long, zoom length
 const attribution= '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-//L is available to me because i associated L library and any funciton i want to load i say L.
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, {attribution});
 tiles.addTo(mymap);

@@ -1,9 +1,6 @@
   let lat, lon, weather, air_quality;
   const button = document.getElementById('submit');
   button.addEventListener('click', async event => {
-  /*  const name = document.getElementById('name').value;
-    const mood = document.getElementById('mood').value;
-*/
   /*good exercise: leaflet map from past project to show user where they are located*/
     const data = {lat, lon, weather, air_quality};
     /*send data to server  */
@@ -60,27 +57,7 @@
         document.getElementById('aqvalue').textContent = 'NO READING! :(((';
         air_quality = {value: -1};
 }
-/*INSIDE BUTTON INSTEAD
-  const data = {lat, lon, weather, air_quality};
-    //send data to server
-  const options = {
-     method: 'POST',
-     headers: {
-       'Content-Type': 'application/json'
-     },
-     body: JSON.stringify(data)
-    };
-    const dbresponse = await fetch('/api', options);
-    const dbjson = await dbresponse.json();
-    console.log('client said ');
-    console.log(dbjson);
-    */
-
-
-  /*  as a client, we send requests to the server. Here above is a post request, and its data object,
-    which (in a more advanced video, will be posted to a database),
-    is being turned to a json string to fit the post body.
-    */
+  /* post request above turns data object into a json string to fit post request body. */
   });
 
   }
